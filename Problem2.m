@@ -13,8 +13,10 @@
     C_m = 1;
     %Step size
     stepSize = .001;
+    
+    %Creates pulse current of 5 mA / cm^2 and applies it for .5ms
     I_in = [ones(1, .5/.001) zeros(1, 99.5 / 0.001 + 1)];
-    I_in(I_in == 1) = 5*10;
+    I_in(I_in == 1) = 5;
     
     %Initial conditions
     V_m = [zeros(1, timeLen)];
